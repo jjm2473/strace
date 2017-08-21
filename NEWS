@@ -4,6 +4,10 @@ Noteworthy changes in release ?.?? (????-??-??)
 * Changes in infrastructure
   * The mailing list was moved to strace-devel@lists.strace.io.
 
+* Changes in command line syntax
+  * New syntax for -e option for filter-based expressions.
+    Traditional syntax is also supported.
+
 * Improvements
   * IPv6 addresses shown in socket information in -yy mode are now printed
     in brackets.
