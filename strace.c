@@ -1731,6 +1731,7 @@ init(int argc, char *argv[])
 			break;
 		}
 	}
+	filtering_parsing_finish();
 
 	argv += optind;
 	argc -= optind;
@@ -2384,6 +2385,7 @@ trace_syscall(struct tcb *tcp, unsigned int *sig)
 		case 0:
 			return 0;
 		case 1:
+			filter_syscall(tcp);
 			res = syscall_entering_trace(tcp, sig);
 		}
 		syscall_entering_finish(tcp, res);
