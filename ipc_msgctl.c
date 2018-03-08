@@ -75,7 +75,7 @@ print_msqid_ds(struct tcb *const tcp, const kernel_ulong_t addr, int cmd)
 			break;
 		}
 
-		tprintf(", key=%u", (unsigned) msqid_ds.msg_perm.__key);
+		tprintf(", key=%u", (unsigned) msqid_ds.msg_perm.key);
 		printuid(", cuid=", msqid_ds.msg_perm.cuid);
 		printuid(", cgid=", msqid_ds.msg_perm.cgid);
 		tprints("}");

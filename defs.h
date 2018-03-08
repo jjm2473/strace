@@ -1057,4 +1057,8 @@ scno_is_valid(kernel_ulong_t scno)
 
 #define SYS_FUNC(syscall_name) int SYS_FUNC_NAME(sys_ ## syscall_name)(struct tcb *tcp)
 
+#ifndef IOV_MAX
+#define IOV_MAX UIO_MAXIOV
+#endif
+
 #endif /* !STRACE_DEFS_H */

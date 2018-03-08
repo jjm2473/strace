@@ -1,4 +1,4 @@
-#!/bin/sed -rnf
+#!/bin/sed -Enf
 
 # should not have been exported at all
 /#define[[:space:]]+__NR_(sys_epoll_|arch_specific_syscall|syscalls|syscall_count|syscall_max|available|reserved|unused)/d
